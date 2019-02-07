@@ -13,15 +13,13 @@ Abs = ["Crunch", "Roman Twist", "Plank"]
 
 Bicep = Arms[0:4]
 Tricep = Arms[4:9]
-Shoulder = Arms[9:14]
+Shoulder = Arms[10:14]
 
 Body = Arms+Chest+Back+Legs+Abs
 
-def Welcome():
-    print("Welcome to Gym Application!")
-    Main()
-        
 def Main():
+    print(Bicep)
+    print("Welcome to Gym Application!")
     Menu = input("\nWould you like to do a full body workout or simply get exercises for specific parts? FB or SP: ")
     Menu = Menu.upper()
     print()
@@ -31,6 +29,7 @@ def Main():
        specificPart()
     else:
         Main()
+
 
 def fullBody():
     #in
@@ -62,70 +61,54 @@ def specificPart():
     Part = Part.lower()
     a = 1
     c = 0
-    Amount = 0
-    print()
     if Part == "shoulder":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,5)
             print(c,Shoulder[s])
     elif Part == "tricep":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,4)
             print(c,Tricep[s])
     elif Part == "bicep":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,3)
             print(c,Bicep[s])
     elif Part == "chest":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,4)
             print(c,Chest[s])
     elif Part == "back":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,6)
             print(c,Back[s])
     elif Part == "legs":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,5)
             print(c,Legs[s])
     elif Part == "abs":
         Amount = int(input("How Many Exercises?: "))
-        print()
         while a<=Amount:
-            a = a + 1
             c = c + 1
             s = random.randint(0,2)
             print(c,Abs[s])
     else:
         print("Please Enter a body part.")
         print("\nTry Again")
-        specificPart()
+        specificPart()    
     Main()
-Welcome()
+Main()
 
 
     
