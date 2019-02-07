@@ -18,7 +18,6 @@ Shoulder = Arms[10:14]
 Body = Arms+Chest+Back+Legs+Abs
 
 def Main():
-    print(Bicep)
     print("Welcome to Gym Application!")
     Menu = input("\nWould you like to do a full body workout or simply get exercises for specific parts? FB or SP: ")
     Menu = Menu.upper()
